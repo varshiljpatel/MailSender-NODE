@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="left">
+      <form action="" class="lform">
+        <span>Sender :</span>
+        <input type="email" name="" id="smail" placeholder="Sender's Mail Id">
+        <span>Receiver :</span>
+        <input type="email" name="" id="rmail" placeholder="Receiver's Mail Id">
+        <p class="para">Privacy Policy :</fp>
+        <p>We can not store any type of information that you entered above.
+          You can safely use this service.</p>
+    </div>
+    <div class="right">
+        <span>Subject :</span>
+        <textarea name="" id="subject" rows="3" placeholder="Type Your Mail Subject"></textarea>
+        <span>Message :</span>
+        <textarea name="" id="message" rows="6" placeholder="Type Your Mail Body"></textarea>
+        <button class="submit" value="SEND">Send</button>
+      </form>
+    </div>
+  </div>
+  <script>
+    let text = document.getElementById("message").value;
+    let subject = document.getElementById("subject").value;
+    let from = document.getElementById("smail").value;
+    let to = document.getElementById("rmail").value;
+    let send = document.querySelector(".submit");
+
+    send.addEventListener('click', async () => {
+      let data = await fetch('http://localhost:8080/mail', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          to, from, subject, text
+        })
+      })
+      console.log(data);
+    })
+
+  </script>
+</body>
+
+</html>

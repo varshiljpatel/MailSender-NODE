@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --input: rgb(40, 28, 48);
+}
+
+.main {
+    width: 100vw;
+    background-color: var(--input);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    height: 100vh;
+    width: 30%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right {
+    height: 100vh;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #000;
+}
+
+.lform {
+    width: 70%;
+    padding: 0;
+    padding-top: 8vh;
+    padding-bottom: 4vh;
+}
+
+.main input {
+    padding: 20px 0;
+    font-size: 16px;
+    padding-left: 10px;
+    width: 100%;
+    background-color: var(--input);
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    color: #fff;
+    height: 12px;
+}
+
+#smail, #rmail {
+    margin-top: 4vh;
+    margin-bottom: 0;
+}
+
+#pass {
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+}
+
+.left p {
+    color: #fff;
+    text-align-last: left;
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.left .para {
+    margin-top: 8vh;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.left span {
+    font-weight: 500;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.right span {
+    display: block;
+    font-weight: 500;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.right .rform #subject, #message {
+    width: 100%;
+    border: 0;
+    margin-top: 4vh;
+    background-color: var(--input);
+    border-radius: 0;
+    outline: 0;
+    resize: none;
+    padding: 10px 1px 1px 10px;
+    color: #fff;
+    letter-spacing: 0px;
+    font-size: 16px;
+}
+
+#subject {
+    margin: 4vh 0 8vh 0;
+    height: 100px;
+}
+
+#message {
+    height: 200px;
+    margin-bottom: 10vh;
+}
+
+.rform {
+    width: 70%;
+    height: 100%;
+    padding: 0;
+    padding-top: 8vh;
+    position: relative;
+}
+
+.submit {
+    border: 0;
+    outline: 0;
+    text-align: center;
+    border-radius: 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0%;
+    margin: 0;
+    padding: 9px 27px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #02339e;
+    transition: all 0.3s;
+}
+
+.submit:hover {
+    background-color: #7aa4fd;
+    transform: translateY(-2px);
+}
+
+span {
+    font-size: 22px;
+}
+
+@media (max-width:850px) {
+    .left {
+        width: 100vw;
+        height: auto;
+    }
+
+    .right {
+        width: 100vw;
+        height: auto;
+    }
+
+    .submit {
+        margin-bottom: 10vh;
+    }
+
+    #pass {
+        margin: 5vh 0;
+    }
+
+    .lform input {
+        height: 5vh;
+    }
+
+    .rform {
+        width: 90%;
+        padding-top: 4vh;
+    }
+
+    .lform {
+        width: 90%;
+    }
+}
